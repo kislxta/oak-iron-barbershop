@@ -4,7 +4,7 @@
 — русская версия (Москва): https://kislxta.github.io/oak-iron-barbershop/ru/
 — English version (Brooklyn, NY): https://kislxta.github.io/oak-iron-barbershop/en/
 
-> Демо-проект для портфолио. Бренд, адрес, телефон и отзывы вымышлены.
+> Демо-проект для портфолио. Бренд, адрес, телефон и отзывы вымышлены, фотографии сгенерированы ИИ.
 
 [English below](#english)
 
@@ -39,6 +39,8 @@
 - `sitemap.xml`, `robots.txt`, canonical, страница 404.
 - Семантическая разметка, один H1, доступность (клавиатура, контраст, `prefers-reduced-motion`).
 - Без внешних шрифтов и библиотек: весь код страницы — около 15 КБ в сжатом виде.
+
+PageSpeed Insights, мобильная версия: **100 / 100 / 100 / 100**.
 
 Подробно — в [SEO-CHECKLIST.md](SEO-CHECKLIST.md).
 
@@ -75,7 +77,9 @@ A one-page barbershop website built to do two jobs for the owner: get found in l
 - Price list styled as a classic barbershop sign, with durations and what's included.
 - Booking form: service, barber, date, open times only; phone mask; inline validation; honeypot spam protection; analytics goals for GA4 / Yandex Metrica.
 - Local SEO: `HairSalon` structured data (address, geo, hours, priced services), `FAQPage`, Open Graph, sitemap, robots, canonical.
-- No frameworks, no web fonts: the whole page is ~15 KB gzipped. Accessible: keyboard focus, contrast, reduced motion.
+- No frameworks, no web fonts: the page code is ~15 KB gzipped. Accessible: keyboard focus, contrast, reduced motion.
 - Built with a Python + Jinja2 generator, so a new client is a new JSON file.
 
-*Portfolio demo. The brand, address, phone number and reviews are fictional.*
+- PageSpeed Insights (mobile): **100 / 100 / 100 / 100**.
+
+*Portfolio demo. The brand, address, phone number and reviews are fictional; photos are AI-generated.*
