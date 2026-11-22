@@ -167,16 +167,25 @@ button { font: inherit; cursor: pointer; }
 .price__value small { font-size: .78rem; color: rgba(236, 238, 232, .6); }
 .board__note { margin-top: 2rem; color: rgba(236, 238, 232, .75); max-width: 44rem; }
 
+/* Inside the shop */
+.inside { padding: clamp(3.5rem, 7vw, 6rem) 0 0; }
+.inside__wide { width: 100%; height: auto; border-radius: 6px; }
+.inside__works { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+.inside__works figure { margin: 0; }
+.inside__works img { width: 100%; height: auto; border-radius: 6px; }
+.inside__works figcaption { margin-top: .7rem; color: var(--muted); }
+.inside__works figcaption b { font-family: var(--serif); font-size: 1.15rem; color: var(--ink); margin-right: .4rem; }
+
 /* Barbers */
 .barbers { padding: clamp(3.5rem, 7vw, 6rem) 0; }
 .barbers__list { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2rem; }
-.barber { display: flex; flex-direction: column; border-top: 3px solid var(--tile); padding-top: 1.6rem; }
-.barber__mono {
-  width: 88px; height: 88px; border-radius: 50%; display: grid; place-items: center;
-  font-family: var(--serif); font-size: 2.6rem; font-weight: 700; color: var(--tile);
-  background: var(--porcelain); box-shadow: inset 0 0 0 2px var(--brass), inset 0 0 0 7px var(--porcelain), inset 0 0 0 8px rgba(180, 135, 58, .5);
-  margin-bottom: 1.2rem;
+.barber { display: flex; flex-direction: column; }
+.barber__photo {
+  aspect-ratio: 4 / 5; margin-bottom: 1.2rem; overflow: hidden;
+  border-radius: 999px 999px 6px 6px; /* arch, like a barber's mirror */
+  border: 3px solid var(--brass); background: var(--porcelain);
 }
+.barber__photo img { width: 100%; height: 100%; object-fit: cover; }
 .barber__name { font-size: var(--step-2); }
 .barber__role { color: var(--oxblood); font-weight: 600; margin-top: .25rem; }
 .barber__skills { color: var(--muted); margin-top: .7rem; flex: 1; }
@@ -298,6 +307,7 @@ button { font: inherit; cursor: pointer; }
   .board__frame { grid-template-columns: 1fr; }
   .board__group + .board__group { border-left: 0; border-top: 1px solid rgba(180, 135, 58, .45); }
   .steps__list, .reviews__list { grid-template-columns: 1fr; gap: 2rem; }
+  .inside__works { gap: 1rem; }
   .faq__grid, .contacts__grid { grid-template-columns: 1fr; gap: 2rem; }
 }
 @media (max-width: 640px) {
@@ -305,7 +315,10 @@ button { font: inherit; cursor: pointer; }
   .header__row { min-height: 60px; gap: .8rem; }
   .header__phone, .header__actions .btn { display: none; }
   .logo__text { font-size: 1.25rem; }
-  .barbers__list { grid-template-columns: 1fr; }
+  .barbers__list { grid-template-columns: 1fr 1fr; gap: 1.5rem 1rem; }
+  .barber__name { font-size: var(--step-1); }
+  .inside__works { display: flex; gap: .9rem; overflow-x: auto; scroll-snap-type: x mandatory; margin-inline: -1.25rem; padding: 0 1.25rem .4rem; scrollbar-width: none; }
+  .inside__works li { flex: 0 0 74%; scroll-snap-align: center; }
   .board__group { padding: 1.5rem 1.1rem 1.6rem; }
   .mobile-bar {
     display: grid; grid-template-columns: 1fr 1.4fr; gap: .6rem;
